@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Carta</title>
+</head>
+<body>
+    
+    <!--Contenedor principal-->
+    <div class="content-principal">
+        <!--Contenedor carta-->
+        <div class="content-carta" id="carta">
+            
+            <div class="color-fondo" id="fondo">
+                <h3 id="nombreR"></h3>
+                <h2 id="titulo"></h2>
+                <p id="mensajeR"></p>
+                <div class="marco" id="marcoRes">
+                    
+                    <div class="fondo-img" id="img-fondo">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Contenedor form-->
+        <div class="content-form">
+            <h2> Crear una carta </h2>
+            <div class="control-group">
+                <h2>Elige un tema</h2>
+
+                <select name="" id="temaCarta" onchange="temaSeleccionado()">
+                    <option value="0">Selecciona...</option>
+                    <option value="navidad">Navidad</option>
+                    <option value="cumpleanos">Cumpleaños</option>
+                    <option value="motivacion">Motivacion</option>
+
+                </select>
+
+            </div>
+
+            <div class="control-group">
+                <h2>Color fondo</h2>
+
+                <input type="color" id="seleccionColor">
+
+            </div>
+
+            <div class="control-group">
+                <h2>Elige un marco e imagen</h2>
+
+                <div class="control-imgs-marcos">
+                
+                    <img src="media/marcos/marco_1.png" class="galeria" onclick="marcos('marco_1','marco1')"  alt="">
+                    <img src="media/marcos/marco_2.png" class="galeria" onclick="marcos('marco_2','marco2')" alt="">
+                    <img src="media/marcos/marco_4.png" class="galeria" onclick="marcos('marco_4','marco3')" alt="">
+                    
+                    
+                </div>
+
+            </div>
+            <div class="control-group">
+                <h2>Selecciona una imagen de fondo</h2>
+
+                <article class="control-imgs" id="motivacion">
+                
+                    <img src="media/fondos/motivacion/motivacion_1.jpg" class="galeria" onclick="fondosMotivacion('motivacion_1','m1')"  alt="">
+                    <img src="media/fondos/motivacion/motivacion_2.jpg" class="galeria" onclick="fondosMotivacion('motivacion_2','m2')" alt="">
+                    <img src="media/fondos/motivacion/motivacion_3.jpg" class="galeria" onclick="fondosMotivacion('motivacion_3','m3')" alt="">
+                    
+                </article>
+                <article class="control-imgs" id="cumpleanos">
+                
+                    <img src="media/fondos/cumpleaños/cumple_1.png" class="galeria" onclick="fondosCumple('cumple_1.png','c1')"  alt="">
+                    <img src="media/fondos/cumpleaños/cumple_2.png" class="galeria" onclick="fondosCumple('cumple_2.png','c2')" alt="">
+                    <img src="media/fondos/cumpleaños/cumple_3.jpg" class="galeria" onclick="fondosCumple('cumple_3.jpg','c3')" alt="">
+                    
+                </article>
+                <article class="control-imgs" id="navidad">
+                
+                    <img src="media/fondos/navidad/navidad_1.jpg" class="galeria" onclick="fondosNavidad('navidad_1','n1')"  alt="">
+                    <img src="media/fondos/navidad/navidad_2.jpg" class="galeria" onclick="fondosNavidad('navidad_2','n2')" alt="">
+                    <img src="media/fondos/navidad/navidad_3.jpg" class="galeria" onclick="fondosNavidad('navidad_3','n3')" alt="">
+                    
+                </article>
+
+            </div>
+            <div class="control-group">
+                <h2>Datos</h2>
+                <div class="control-datos">
+                    <div class="textosPrincipales">
+                        <input type="text" name="" id="nombreResultado" placeholder="Nombre"><input type="color" name="" id="colorNombre">
+                        <input type="text" name="" id="tituloResultado" placeholder="Titulo"><input type="color" name="" id="colorTitulo">
+                    </div>
+                    <div class="mensaje">
+                        <textarea name="" id="mensajeResultado" cols="25" rows="5" placeholder="Agregar mensaje..."></textarea><input type="color" name="" id="colorMensaje">
+                    </div>
+                    
+
+                </div>
+                <input type="button" value="Mostrar" id="mostrar">
+            </div>
+
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

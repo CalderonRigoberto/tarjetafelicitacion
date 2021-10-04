@@ -1,0 +1,86 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.content-principal{
+    max-width: 1500px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-principal .content-carta{
+    background-color: #272732;
+   
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .content-principal{
+        height: 790px;
+    }
+    .content-principal .content-carta{
+        max-width: 1000px;
+        width: 100%;
+        height: 800px;
+        overflow-y: hidden;
+    }
+}
+
+.color-fondo{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    border: 5px dashed #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    z-index: 2;
+}
+.color-fondo h2{
+    position: absolute;
+    top: 2.5rem;
+    font-size: 2rem;
+}
+.color-fondo h3{
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.color-fondo p{
+    position: absolute;
+    bottom: 4rem;
+    font-size: 1.5rem;
+    font-style: oblique;
+}
+.marco{
+    position: absolute;
+    width: 350px;
+    height: 600px;
+    
+
+}
+
+.fondo-img{
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    z-index: -3;
+}
+
+                
